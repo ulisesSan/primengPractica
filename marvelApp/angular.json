@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "primeAngular": {
+    "marverApp": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -17,12 +17,12 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/prime-angular",
+            "outputPath": "dist/marver-app",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": [
               "zone.js"
-            ], 
+            ],
             "tsConfig": "tsconfig.app.json",
             "inlineStyleLanguage": "scss",
             "assets": [
@@ -32,7 +32,7 @@
             "styles": [
               "src/styles.scss",
               "node_modules/primeicons/primeicons.css",
-              "primeng/resources/themes/bootstrap4-dark-blue/theme.css",
+              "primeng/resources/themes/lara-dark-indigo/theme.css",
               "node_modules/primeng/resources/primeng.min.css"
             ],
             "scripts": []
@@ -68,10 +68,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "primeAngular:build:production"
+              "browserTarget": "marverApp:build:production"
             },
             "development": {
-              "browserTarget": "primeAngular:build:development"
+              "browserTarget": "marverApp:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -79,7 +79,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "primeAngular:build"
+            "browserTarget": "marverApp:build"
           }
         },
         "test": {
@@ -97,6 +97,7 @@
             ],
             "styles": [
               "src/styles.scss"
+              
             ],
             "scripts": []
           }
@@ -105,6 +106,6 @@
     }
   },
   "cli": {
-    "analytics": "1bbc047e-aa58-429f-a485-c5326154b8d6"
+    "analytics": "a9917364-4397-43c5-b1e8-9b491cc2fb64"
   }
 }

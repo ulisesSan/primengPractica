@@ -6,9 +6,11 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title: string = "";
+  title = 'marverApp';
 
-  upper(){
-    this.title = this.title.toUpperCase();
+  ngOninit(){
+
   }
+
+  
 }
