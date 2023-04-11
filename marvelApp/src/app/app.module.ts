@@ -15,7 +15,9 @@ import { FieldsetModule } from 'primeng/fieldset'
 import { ToolbarModule } from 'primeng/toolbar';
 import { CreatorsComponent } from './component/creators/creators.component';
 import { CharactersComponent } from './component/characters/characters.component';
-import { EventsComponent } from './component/events/events.component'
+import { EventsComponent } from './component/events/events.component';
+import { ImageModule } from 'primeng/image';
+import { ComicsInfoComponent } from './component/comics/comics-info/comics-info.component'
 
 @NgModule({
   declarations: [
@@ -24,6 +26,7 @@ import { EventsComponent } from './component/events/events.component'
     CreatorsComponent,
     CharactersComponent,
     EventsComponent,
+    ComicsInfoComponent,
   ],
   imports: [
     BrowserModule,
@@ -35,7 +38,8 @@ import { EventsComponent } from './component/events/events.component'
     InputTextModule,
     CardModule,
     FieldsetModule,
-    ToolbarModule
+    ToolbarModule,
+    ImageModule
   ],
   providers: [ComicsService],
   bootstrap: [AppComponent]
