@@ -1,14 +1,16 @@
 <div class="row">
     <div class="col-md-4" *ngFor="let comicsList of comics">
         <div class="card" >  
-            <p-card>
-                <ng-template pTemplate="header" class="text-center">
+            <p-card >
+            <ng-template pTemplate="header" class="">
                     <h3 class="h5 text-center md-1">{{comicsList.title}}</h3>
                     <div hidden="true" id="idComic">{{comicsList.id}}</div>
                 </ng-template>
-                <button [routerLink]="['/comicinfo/',comicsList.id]">
-                    <p-image src="{{comicsList.thumbnail.path}}.{{comicsList.thumbnail.extension}}" class="card-img-top" width="350" height="300"></p-image>
-                </button>
+                <div  class="align-items-center">
+                    <button [routerLink]="['/comicinfo/',comicsList.id]">
+                        <p-image src="{{comicsList.thumbnail.path}}.{{comicsList.thumbnail.extension}}" class="card-img-top" width="420" height="320"></p-image>
+                    </button>
+                </div>
                 <ng-template pTemplate="footer">
                     <p-fieldset legend="Descripcion" [toggleable]="true">
                         {{comicsList.description}}
