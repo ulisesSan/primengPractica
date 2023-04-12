@@ -1,1 +1,22 @@
-<p>comics-info works!</p>
+<div class="row" *ngFor="let comicData of comic.data.results">
+    <p-card >
+        <ng-template pTemplate="header">
+                <h3 class="h2 text-center md-1">{{comicData.title}}</h3>
+
+            </ng-template>
+            <div>
+                <button class="align-items-center">
+                    <div class="align-items-center">
+                        <p-image src="{{comicData.thumbnail.path}}.{{comicData.thumbnail.extension}}" class="card-img-top" ></p-image>
+                    </div>
+                </button>
+            </div>
+            <ng-template pTemplate="footer">
+                <p-fieldset legend="Descripcion" [toggleable]="false">
+                    <h3 class="h5 text-center md-3">
+                        {{comicData.description}}
+                    </h3>
+                </p-fieldset>
+            </ng-template>
+        </p-card>
+</div>

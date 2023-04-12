@@ -13,6 +13,8 @@ export class ComicsInfoComponent {
 
   }
 
+  comic: any ='';
+
   ngOnInit(){
     this.comicInfo()
   }
@@ -22,7 +24,8 @@ export class ComicsInfoComponent {
     console.log(params['id'])
     this.comicServce.getComic(params['id']).subscribe(
       res => {
-        console.log(res)
+        this.comic = res
+        console.log(this.comic.data.results)
       },
       err => console.error(err)
 

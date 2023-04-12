@@ -1,10 +1,9 @@
 <div class="row">
-    <div class="col-md-4" *ngFor="let comicsList of comics">
-        <div class="card" >  
+    <div class="col-md-4 mb-4" border-style="none" *ngFor="let comicsList of comics">
+        <div class="card">  
             <p-card >
-            <ng-template pTemplate="header" class="">
+            <ng-template pTemplate="header">
                     <h3 class="h5 text-center md-1">{{comicsList.title}}</h3>
-                    <div hidden="true" id="idComic">{{comicsList.id}}</div>
                 </ng-template>
                 <div  class="align-items-center">
                     <button [routerLink]="['/comicinfo/',comicsList.id]">

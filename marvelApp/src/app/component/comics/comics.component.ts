@@ -16,23 +16,16 @@ export class ComicsComponent {
   }
 
   ngOnInit(){
-    
     this.comicsGets()
   }
 
   comicsGets(){
     this.comicService.getComics().subscribe(
       res => {
-        this.comics = res.data.results,
-        console.log(res.data.results)
+        this.comics = res.data.results
+        console.log(this.comics)
       },
       err => console.error(err)
     )
   }
-
-/* Copiar despues
-  comicGet(){
-    var params =  this.activateRouting.snapshot.params
-    this.comicService.getComic(params['idComic']).
-  }*/
 }
