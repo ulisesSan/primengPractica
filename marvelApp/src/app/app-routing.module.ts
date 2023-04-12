@@ -22,9 +22,9 @@ const routes: Routes = [
     component:CharactersComponent
   },
   {
-    path: 'comicinfo',
+    path: 'comicinfo/:id',
     component:ComicsInfoComponent
-  }
+  },
 
 ];
 

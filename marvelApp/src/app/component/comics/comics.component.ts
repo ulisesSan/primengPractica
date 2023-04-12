@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { ComicsService } from 'src/app/services/comics.service';
 
+
 @Component({
   selector: 'app-comics',
   templateUrl: './comics.component.html',
@@ -15,11 +16,12 @@ export class ComicsComponent {
   }
 
   ngOnInit(){
-    this.comicsList()
+    
+    this.comicsGets()
   }
 
-  comicsList(){
-    this.comicService.getComic().subscribe(
+  comicsGets(){
+    this.comicService.getComics().subscribe(
       res => {
         this.comics = res.data.results,
         console.log(res.data.results)
@@ -27,4 +29,10 @@ export class ComicsComponent {
       err => console.error(err)
     )
   }
+
+/* Copiar despues
+  comicGet(){
+    var params =  this.activateRouting.snapshot.params
+    this.comicService.getComic(params['idComic']).
+  }*/
 }

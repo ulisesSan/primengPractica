@@ -6,9 +6,9 @@
                     <h3 class="h5 text-center md-1">{{comicsList.title}}</h3>
                     <div hidden="true" id="idComic">{{comicsList.id}}</div>
                 </ng-template>
-                <p-button routerLink="/comicinfo">
+                <button [routerLink]="['/comicinfo/',comicsList.id]">
                     <p-image src="{{comicsList.thumbnail.path}}.{{comicsList.thumbnail.extension}}" class="card-img-top" width="350" height="300"></p-image>
-                </p-button>
+                </button>
                 <ng-template pTemplate="footer">
                     <p-fieldset legend="Descripcion" [toggleable]="true">
                         {{comicsList.description}}
