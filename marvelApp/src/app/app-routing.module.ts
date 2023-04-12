@@ -3,7 +3,8 @@ import { RouterModule, Routes } from '@angular/router';
 
 
 import { ComicsComponent } from './component/comics/comics.component'
-import { CharactersComponent } from './component/characters/characters.component'
+import { CharactersComponent } from './component/characters/characters.component';
+import { ComicsInfoComponent } from './component/comics/comics-info/comics-info.component'
 
 const routes: Routes = [
 
@@ -19,6 +20,10 @@ const routes: Routes = [
   {
     path:'characters',
     component:CharactersComponent
+  },
+  {
+    path: 'comicinfo',
+    component:ComicsInfoComponent
   }
 
 ];
