@@ -14,7 +14,7 @@ export class ComicsComponent {
   constructor(private comicService: ComicsService){
 
   }
-
+  i: number = 0 
   ngOnInit(){
     this.comicsGets()
   }
@@ -23,7 +23,13 @@ export class ComicsComponent {
     this.comicService.getComics().subscribe(
       res => {
         this.comics = res.data.results
-        console.log(this.comics)
+        for (this.i = 0;this.i <= res.data.results.length-1 ; this.i++){
+          console.log(this.i)
+          if(this.comics.description[this.i] == ""){
+            this.comics.descripcion[this.i] = "Sin descripcion"
+          }
+        }
+        //console.log(res.data.results)
       },
       err => console.error(err)
     )
