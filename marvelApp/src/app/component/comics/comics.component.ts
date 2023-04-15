@@ -22,14 +22,12 @@ export class ComicsComponent {
   comicsGets(){
     this.comicService.getComics().subscribe(
       res => {
-        this.comics = res.data.results
         for (this.i = 0;this.i <= res.data.results.length-1 ; this.i++){
-          console.log(this.i)
-          if(this.comics.description[this.i] == ""){
-            this.comics.descripcion[this.i] = "Sin descripcion"
+          if(!res.data.results[this.i].description){
+            res.data.results[this.i].description = "Sin descripcion"
           }
         }
-        //console.log(res.data.results)
+        this.comics = res.data.results
       },
       err => console.error(err)
     )
