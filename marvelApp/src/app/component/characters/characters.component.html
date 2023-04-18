@@ -1,1 +1,17 @@
-<p>characters works!</p>
+<div class="row">
+    <div class="col-md-4 mb-5" *ngFor="let characterList of characters">
+        <p-card>
+            <ng-template pTemplate="header">
+                <h3 class="h5 text-center md1">
+                    {{characterList.name}}
+                </h3>
+                <p-image src="{{characterList.thumbnail.path}}.{{characterList.thumbnail.extension}}" width="400" height="600"></p-image>
+            </ng-template>
+            <ng-template pTemplate="flooter">
+                <p-fieldset legend="Description" [toggleable]="true">
+                    {{characterList.description}}
+                </p-fieldset>
+            </ng-template>
+        </p-card>
+    </div>
+</div>

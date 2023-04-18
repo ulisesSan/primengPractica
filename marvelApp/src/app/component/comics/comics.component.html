@@ -4,14 +4,13 @@
             <p-card >
             <ng-template pTemplate="header">
                     <h3 class="h5 text-center md-1">{{comicsList.title}}</h3>
-                </ng-template>
-                <div  class="align-items-center">
-                    <button [routerLink]="['/comicinfo/',comicsList.id]">
-                        <p-image src="{{comicsList.thumbnail.path}}.{{comicsList.thumbnail.extension}}" class="card-img-top" width="420" height="320"></p-image>
+                    <p-image src="{{comicsList.thumbnail.path}}.{{comicsList.thumbnail.extension}}" class="card-img-top" width="600" height="400"></p-image>
+                    <button pbutton type="button" [routerLink]="['/comicinfo/',comicsList.id]" class="p-button-info">
+                        VerMas
                     </button>
-                </div>
+                </ng-template>
                 <ng-template pTemplate="footer">
-                    <p-fieldset legend="Descripcion" [toggleable]="true">
+                    <p-fieldset legend="Descripcion" [toggleable]="true" [collapsed]="true">
                         {{comicsList.description}}
                     </p-fieldset>
                 </ng-template>
