@@ -5,6 +5,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { ComicsComponent } from './component/comics/comics.component'
 import { CharactersComponent } from './component/characters/characters.component';
 import { ComicsInfoComponent } from './component/comics/comics-info/comics-info.component'
+import { CreatorsComponent } from './component/creators/creators.component'
 
 const routes: Routes = [
 
@@ -25,6 +26,10 @@ const routes: Routes = [
     path: 'comicinfo/:id',
     component:ComicsInfoComponent
   },
+  {
+    path: 'creators',
+    component: CreatorsComponent 
+  }
 
 ];
 

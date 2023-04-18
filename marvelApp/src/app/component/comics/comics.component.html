@@ -5,12 +5,13 @@
             <ng-template pTemplate="header">
                     <h3 class="h5 text-center md-1">{{comicsList.title}}</h3>
                     <p-image src="{{comicsList.thumbnail.path}}.{{comicsList.thumbnail.extension}}" class="card-img-top" width="600" height="400"></p-image>
-                    <button pbutton type="button" [routerLink]="['/comicinfo/',comicsList.id]" class="p-button-info">
-                        VerMas
-                    </button>
+                    
                 </ng-template>
+                <p-button type="button" [routerLink]="['/comicinfo/',comicsList.id]" class="p-button-success">
+                        Ver más
+                    </p-button>
                 <ng-template pTemplate="footer">
-                    <p-fieldset legend="Descripcion" [toggleable]="true" [collapsed]="true">
+                    <p-fieldset legend="Descripción" [toggleable]="true" [collapsed]="true">
                         {{comicsList.description}}
                     </p-fieldset>
                 </ng-template>

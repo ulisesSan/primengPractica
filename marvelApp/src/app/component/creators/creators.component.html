@@ -1,1 +1,17 @@
-<p>creators works!</p>
+<div class="row">
+    <div class="col-md-4 mb-5" *ngFor="let creatorList of creators">
+        <p-card>
+            <ng-template pTemplate="header">
+                <h3 class="h5 text-center md1">
+                    {{creatorList.fullname}}
+                </h3>
+                <p-image src="{{creatorList.thumbnail.path}}.{{creatorList.thumbnail.extension}}" width="400" height="600"></p-image>
+            </ng-template>
+            <ng-template pTemplate="flooter">
+                <p-fieldset legend="Descripción" [toggleable]="true" [collapsed]="true">
+                    {{creatorList.description}}
+                </p-fieldset>
+            </ng-template>
+        </p-card>
+    </div>
+</div>
